@@ -3,12 +3,15 @@ public class Carro {
     private String modelo;
     private Motor motor;
     private TanqueCombustivel tanque;
+  
 
     public Carro(String modelo, TipoCombustivel tipoCombustivel, int consumoMotor, int capacidadeTanque) {
         this.modelo = modelo;
         motor = new Motor(tipoCombustivel, consumoMotor);
         tanque = new TanqueCombustivel(tipoCombustivel, capacidadeTanque);
     }
+
+ 
 
     public String getModelo() {
         return modelo;
@@ -47,7 +50,15 @@ public class Carro {
             tanque.gasta(motor.combustivelNecessario(distancia));
             return true;
         }
+        
         return false;
+    }
+
+
+    public void testa(){
+        if(this.modelo.equals("econo")){
+            motor.checaEco();
+        }
     }
 
     @Override

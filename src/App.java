@@ -6,6 +6,8 @@ public class App {
         Carro utilitario = new Carro("utilitario", TipoCombustivel.DIESEL, 5,70);
         Carro suv = new Carro("suv", TipoCombustivel.FLEX, 8,55);
         Carro SUVFlex = new Carro("suvflex", TipoCombustivel.FLEX, 8, 65);
+        Carro econo = new Carro("econo", TipoCombustivel.GASOLINA, 20,55);
+
         
 
         System.out.println("Tipos de veiculos:");
